@@ -24,6 +24,11 @@
 						<div class="course-desc">
 							<p><%= user.courses[i].description %></p>
 						</div>
+						<!-- kurstan ayrılma-->
+						<form method="POST" action="/courses/release">
+							<input type="hidden" name="course_id" value="<%= user.courses[i]._id %>" />
+							<button class="btn btn-lg btn-danger text-white"><span>RELEASE</span></button>
+						</form>
 					</div>
 				</div>
 			</div>
